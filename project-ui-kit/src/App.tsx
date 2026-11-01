@@ -1,21 +1,23 @@
 import UiButton from "./ui-rit/UiButton/UiButton";
 
 const App = () => {
-
   const handleClick = () => {
-    console.log("Клик из APP")
-  }
-
-  const handleClick2 = () => {
-    console.log("Клик из APP2")
-  }
+    console.log("Клик из App");
+  };
 
   return (
     <div>
-      <h1>Hello</h1>
-      <UiButton onClick={handleClick}>Кнопка из App </UiButton>
-      <UiButton onClick={handleClick2}>Кнопка из App2 </UiButton>
-    </div>)
-}
+      <UiButton theme="contained" onClick={handleClick}>
+        Contained
+      </UiButton>
+      <UiButton theme="outlined" onClick={handleClick}>
+        Outlined
+      </UiButton>
+      <UiButton theme="text" onClick={handleClick}>
+        Text
+      </UiButton>
+    </div>
+  );
+};
 
 export default App;
